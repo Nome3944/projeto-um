@@ -1,34 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-inlineblock.css">
-    <title>Document</title>
-</head>
+body{
+    background-color: #eee;
+}
+div{
+    padding:10px;
+    background-color:white;
+    border:solid 1px #ccc;
+}
+#inline-block div{
+    display: inline-block;
+    width: 30%;
+ 
+    
+}
+#Float div{
+    float:left;
+    width: 30%;
 
-<body>
-    <h1>Inline-Block</h1>
-    <section id="inline-block">
-        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic id maxime officiis dicta, unde non alias magni quam perspiciatis, beatae ex veniam ullam? Qui, temporibus optio excepturi necessitatibus, sint sit quidem laborum aspernatur possimus officia molestiae dolorum doloribus voluptatem magni exercitationem fuga! Blanditiis et, consectetur nostrum atque tempore non sequi!</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis expedita odit necessitatibus rerum culpa dolor.</div>
-        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At praesentium laborum provident, porro mollitia nostrum?</div>
-    </section>
-
-    <h1>Float</h1>
-    <section id="Float">
-        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem labore ducimus nobis ipsam quaerat?</div>
-        <div>Lorem ipsum dolor sit amet consectetur.</div>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
-        </section>
-    </section>
-    <div id=limpar-floats></div>
-<br>
-     <h2>Grid</h2>
-        <section id="grid">
-        <div class="um">Lorem ipsum, amet adipisicing elit. Corporis unde voluptat... </div>
-        <div class="dois">Laudantium optio at ratione praesentium qui dicta animi... </div>
-        <div class="tres">Inventore ab officia fugit dolorem atque totam magnam...</div>
-        </section>
-    </section>
+}
+.limpar-floats{
+    clear:both;
+}
+#grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 160px 100%;
+    gap: 5px;
+    }
+    .um{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    }
+    .dois{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    }
+    .tres{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    }
